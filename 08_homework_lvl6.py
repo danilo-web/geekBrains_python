@@ -8,7 +8,7 @@
 
 maxi = 100
 version = int(maxi / 2)
-gap = int(version/2)
+gap = int(version / 2)
 gap_count = 0
 answer = "0"
 
@@ -31,7 +31,7 @@ while True:
     else:
         print('incorrect answer, plz type: "+" or "-" or "="')
         continue
-    gap = int(gap/2)
+    gap = int(gap / 2)
     if gap == 1:
         if gap_count == 0:
             gap = 2
@@ -39,5 +39,24 @@ while True:
     if gap == 0:
         gap = gap + 1
 
+#  альтеративное решение
 
+minimum = 1
+max_number = 100
 
+while True:
+    number = 0
+    result = (minimum + max_number) // 2
+    print(result)
+    answer = input("is this correct?  ")
+
+    if answer == "=":
+        break
+
+    elif answer == "+":
+        minimum = 0 + result
+        print(minimum, max_number, result)
+
+    else:
+        max_number = 0 + result
+        print(minimum, max_number, result)
